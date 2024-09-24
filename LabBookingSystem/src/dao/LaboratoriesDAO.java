@@ -57,13 +57,13 @@ public class LaboratoriesDAO {
 	        try {
 	            conn = LabDB.createC();
 
-	            String qDelete = "delete from TestDetails where testName=?";
+	            String qDelete = "DELETE FROM TestDetails WHERE testName=?"; // Correct SQL query with 1 placeholder
 	            pstmt = conn.prepareStatement(qDelete);
-	            pstmt.setString(2, testName);
-	            
+	            pstmt.setString(1, testName); // Change index from 2 to 1
+
 	            pstmt.executeUpdate();
 	            f = true;
-	            
+
 	        } catch (SQLException e) {
 	            e.printStackTrace();
 	        } finally {

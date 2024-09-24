@@ -12,7 +12,7 @@ import operation.AppointmentOperation;
 public class UserMenu {
 
 
-    // Doctor menu
+    // User menu
     public static void userMenu(Scanner sc) {
         int choice;
         do {
@@ -46,9 +46,9 @@ public class UserMenu {
 	       do {
 	           System.out.println("\nWelcome to Patients operation\n");
 	           System.out.println(" 1.  Add Details");
-	           System.out.println(" 2.  Update Details");
+	           //System.out.println(" 2.  Update Details");
 	           
-	           System.out.println("Press 0 for returning to Doctor menu");
+	           System.out.println("Press 0 for returning to User menu");
 
 	           System.out.print("\nEnter your choice: ");
 	           choice = sc.nextInt();
@@ -56,12 +56,12 @@ public class UserMenu {
 	               case 1:
 	                   PatientsOperation.addPatient(sc);
 	                   break;
-	               case 2:
-	            	   PatientsOperation.updatePatient(sc);
+	              /* case 2:
+	            	   PatientsOperation.addPatient(sc);
 	                   break;
-	             
+	             */
 	               case 0:
-	                   System.out.println("Returning back to Doctors menu.");
+	                   System.out.println("Returning back to Users menu.");
 	                   break;
 	               default:
 	                   System.out.println("Invalid choice. Please try again.");
@@ -81,7 +81,7 @@ public class UserMenu {
             System.out.println(" 1. Book Appointment");
            System.out.println("  2.  View all tests");
             System.out.println(" 3.  View  all Doctors");
-            System.out.println("Press 0 for returning to Doctor menu");
+            System.out.println("Press 0 for returning to User menu");
 
             System.out.print("\nEnter your choice: ");
             choice = sc.nextInt();
@@ -97,7 +97,7 @@ public class UserMenu {
                     break;
                 
                 case 0:
-                    System.out.println("Returning back to Doctors menu.");
+                    System.out.println("Returning back to Users menu.");
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");

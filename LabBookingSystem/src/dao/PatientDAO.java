@@ -49,7 +49,7 @@ public class PatientDAO {
     }
 
     // Update Instructor
-    public static boolean update(Patient obj, int p_id) {
+    /*public static boolean update(Patient obj, int p_id) {
         boolean f = false;
         try {
             conn = LabDB.createC();
@@ -76,7 +76,7 @@ public class PatientDAO {
         return f;
     }
 
-    
+    */
 
     // 
     public static Patient getByPatientID(String p_id) {

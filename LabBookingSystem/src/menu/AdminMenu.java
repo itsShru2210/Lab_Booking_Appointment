@@ -7,6 +7,7 @@ import operation.DoctorOperation;
 
 import operation.LaboratorieOperation;
 import operation.PatientsOperation;
+import operation.AppointmentOperation;
 
 
 
@@ -21,6 +22,8 @@ public class AdminMenu {
 	           System.out.println(" 2.Manage Patients");
 	          
 	           System.out.println(" 3.Manage Laboratories");
+	           System.out.println(" 4.view Appointment");
+	           
 	           
 	           System.out.println("0.to Logout from Admin menu");
 	           
@@ -38,6 +41,9 @@ public class AdminMenu {
 	                   manageLaboratories(sc);
 	                   break;
 	             
+	               case 4:
+	            	   AppointmentOperation.viewAppointments();
+	                   break;
 	               case 0:
 	                   System.out.println("Logged out successfully from Admin page.");
 	                   break;
@@ -84,9 +90,9 @@ public class AdminMenu {
 	       do {
 	           System.out.println("\nWelcome to Patientsoperation\n");
 	           System.out.println(" 1.  Add Patients");
-	           System.out.println(" 2.  Update an Patients");
-	           System.out.println(" 3.  View all Patients");
-	           System.out.println("4.  View Patients by Id");
+	          // System.out.println(" 2.  Update an Patients");
+	           System.out.println(" 2.  View all Patients");
+	           System.out.println("3.  View Patients by Id");
 	           
 	           System.out.println("Press 0 for returning to admin menu");
 
@@ -96,13 +102,11 @@ public class AdminMenu {
 	               case 1:
 	                   PatientsOperation.addPatient(sc);
 	                   break;
+	               
 	               case 2:
-	            	   PatientsOperation.updatePatient(sc);
-	                   break;
-	               case 3:
 	            	   PatientsOperation.showPatients(sc);
 	                   break;
-	               case 4:
+	               case 3:
 	            	   PatientsOperation.showPatientById(sc);
 	                   break;
 	               

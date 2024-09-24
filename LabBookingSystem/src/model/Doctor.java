@@ -1,60 +1,52 @@
 package model;
 
-
 public class Doctor {
-	private int dr_id;
+    private int dr_id;
     private String dr_name;
-    private int dr_no;
-   
+    private String dr_no; // Changed to String to accommodate phone numbers
 
     // Constructor
-    public Doctor(int dr_id,String dr_name,int dr_no)
- {
+    public Doctor(int dr_id, String dr_name, String dr_no) {
         this.dr_id = dr_id;
         this.dr_name = dr_name;
         this.dr_no = dr_no;
-        
     }
 
     public Doctor() {
-		// TODO Auto-generated constructor stub
-	}
+        // Default constructor
+    }
 
-	// Getters and setters
-    public int getDoctor_id() {
+    // Getters and setters
+    public int getDrId() {
         return dr_id;
     }
 
-    public void setDoctor_id(int dr_id) {
+    public void setDrId(int dr_id) {
         this.dr_id = dr_id;
     }
 
-    public String getDoctor_name() {
+    public String getDrName() {
         return dr_name;
     }
 
-    public void setDoctor_name(String dr_name) {
+    public void setDrName(String dr_name) {
         this.dr_name = dr_name;
     }
-    
-    public int getDoctor_no() {
+
+    public String getDrNo() {
         return dr_no;
     }
 
-    public void setDoctor_no(int dr_no) {
+    public void setDrNo(String dr_no) {
         this.dr_no = dr_no;
     }
-    
-   
 
     @Override
     public String toString() {
-        return "doctor{" +
-                "dr_id='" + dr_id + '\'' +
+        return "Doctor{" +
+                "dr_id=" + dr_id +
                 ", dr_name='" + dr_name + '\'' +
                 ", dr_no='" + dr_no + '\'' +
-              
                 '}';
     }
-
 }

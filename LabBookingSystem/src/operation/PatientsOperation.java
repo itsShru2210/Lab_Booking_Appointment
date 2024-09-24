@@ -44,7 +44,7 @@ public class PatientsOperation {
 	            System.out.println("Something went wrong.");
 	        }
 	    }
-
+/*
 	    public static void updatePatient(Scanner sc) {
 	        System.out.println("Enter Patients ID to update:");
 	        int p_id = sc.nextInt();
@@ -82,7 +82,7 @@ public class PatientsOperation {
 	            System.out.println("Something went wrong.");
 	        }
 	    }
-
+*/
 	    public static void showPatients(Scanner sc) {
 	        // Get all Instructors
 	        List<Patient> patients = PatientDAO.getAllPatients();
